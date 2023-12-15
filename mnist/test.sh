@@ -1,0 +1,4 @@
+# ./mnist/test.sh
+#!/bin/bash
+DATA_BODY='{"img":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAABbElEQVR4nO2UO47CMBCGZ8b4ES8lXAAqOAAHYCUOQMltOA41LSeBAtEiIUKBMHZsb8FDCLEQQ0o+uUiU5Jtf9kwAvtxQq9UQ8XRdr9cRUQiRKqG7e8aYtXa73RZFobUmohDCp0njq8U5T04KAAhAiIT4o3Wm1G+/fzTGHA5HY95P+qAMopQSESOAtdYYMxwOpZQfSYnopI4AiKi1jjF67z+S3j1ljAkhYnz+brp0vV4vl8sqpdPp1BjDGKtASkQRYLPZFEWhlLrOSLL0+iXnfLFYRIDRaJSg+y+plHIwGDjnJpNJvHTCc+5rvjzRxJA3ZFkmhPDe73a7TqdDREqpt21nGo3Gfr/v9XpSyoTJufB4g5RSRNTtdp1zzjnGWJn/SCnyPLfW5nnearUQsYIdOME5b7fb3vsQQghhPp/Dpc+eNNaL/vDer1YrzrmUstlszmYzY8ypwHg8rib4OQiRECJhTMuAiGVG4EuV/AHgnpSyGKQiowAAAABJRU5ErkJggg=="}'
+curl -X POST -H "Content-Type: application/json" -d "$DATA_BODY" http://127.0.0.1:8080/predictions/mnist
